@@ -14,6 +14,9 @@
 		3559FAE51AF3FB2E00E0E702 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3559FAE41AF3FB2E00E0E702 /* Images.xcassets */; };
 		3559FAE81AF3FB2E00E0E702 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3559FAE61AF3FB2E00E0E702 /* LaunchScreen.xib */; };
 		3559FAF41AF3FB2E00E0E702 /* Facebook_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3559FAF31AF3FB2E00E0E702 /* Facebook_DemoTests.m */; };
+		357620DC1AF50BEC0093B931 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357620DA1AF50BEC0093B931 /* FBSDKCoreKit.framework */; };
+		357620DD1AF50BEC0093B931 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357620DB1AF50BEC0093B931 /* FBSDKLoginKit.framework */; };
+		357620E01AF52C720093B931 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 357620DF1AF52C720093B931 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		3559FAED1AF3FB2E00E0E702 /* Facebook DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Facebook DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3559FAF21AF3FB2E00E0E702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3559FAF31AF3FB2E00E0E702 /* Facebook_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Facebook_DemoTests.m; sourceTree = "<group>"; };
+		357620DA1AF50BEC0093B931 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		357620DB1AF50BEC0093B931 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		357620DE1AF52C720093B931 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
+		357620DF1AF52C720093B931 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				357620DD1AF50BEC0093B931 /* FBSDKLoginKit.framework in Frameworks */,
+				357620DC1AF50BEC0093B931 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +90,12 @@
 		3559FAD61AF3FB2E00E0E702 /* Facebook Demo */ = {
 			isa = PBXGroup;
 			children = (
+				357620DA1AF50BEC0093B931 /* FBSDKCoreKit.framework */,
+				357620DB1AF50BEC0093B931 /* FBSDKLoginKit.framework */,
 				3559FADB1AF3FB2E00E0E702 /* AppDelegate.h */,
 				3559FADC1AF3FB2E00E0E702 /* AppDelegate.m */,
+				357620DE1AF52C720093B931 /* HomeViewController.h */,
+				357620DF1AF52C720093B931 /* HomeViewController.m */,
 				3559FADE1AF3FB2E00E0E702 /* ViewController.h */,
 				3559FADF1AF3FB2E00E0E702 /* ViewController.m */,
 				3559FAE11AF3FB2E00E0E702 /* Main.storyboard */,
@@ -222,6 +235,7 @@
 				3559FAE01AF3FB2E00E0E702 /* ViewController.m in Sources */,
 				3559FADD1AF3FB2E00E0E702 /* AppDelegate.m in Sources */,
 				3559FADA1AF3FB2E00E0E702 /* main.m in Sources */,
+				357620E01AF52C720093B931 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +359,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Facebook",
+					Demo,
+					"$(PROJECT_DIR)/Facebook",
+					Demo,
+					/Users/princehunter/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Facebook Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +377,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Facebook",
+					Demo,
+					"$(PROJECT_DIR)/Facebook",
+					Demo,
+					/Users/princehunter/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Facebook Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +444,7 @@
 				3559FAF91AF3FB2E00E0E702 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3559FAFA1AF3FB2E00E0E702 /* Build configuration list for PBXNativeTarget "Facebook DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +453,7 @@
 				3559FAFC1AF3FB2E00E0E702 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
